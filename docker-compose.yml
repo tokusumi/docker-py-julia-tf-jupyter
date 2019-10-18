@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  tf:
+    build: ./src
+    container_name: tf
+    ports:
+      - 80:8888
+    volumes:
+      - ./src:/notebooks
+      - ./jupyter_notebook_config.json:/root/.jupyter/jupyter_notebook_config.json
